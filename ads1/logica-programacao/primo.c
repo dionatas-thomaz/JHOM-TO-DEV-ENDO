@@ -17,5 +17,6 @@ int main()
     else
         printf("esse numero nao e primo");
 
+
     return 0;
 }

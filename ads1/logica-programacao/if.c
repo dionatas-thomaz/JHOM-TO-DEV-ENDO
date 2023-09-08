@@ -31,7 +31,7 @@ int main()
         printf("aluno de recuperacao");
     }else
     printf("aluno reprovado");
-*/
+
 
    float massa, a, altura, imc;
 
@@ -49,3 +49,5 @@ int main()
 
           return 0;
 }
+*/
+
