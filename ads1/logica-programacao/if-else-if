@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main()
+{
+
+    float nota;
+    {
+        printf("digite a nota:");
+        scanf("%f", nota);
+    }
+    int op;
+    {
+        printf("1 - maior ou igual a 7");
+        printf("2 - menor que 4");
+        printf("3 - maior de 4");
+
+        scanf("%d", op);
+    }
+    int a = nota;
+    if (a >= 7)
+    {
+
+        printf("aprovado");
+    }
+    else if (a > 4 && a < 7)
+    {
+        printf("recuperaçao");
+    }
+    else
+    {
+        printf("reprovado");
+    }
+
+    return 0;
+}
