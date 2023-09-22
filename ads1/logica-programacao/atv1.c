@@ -1,3 +1,5 @@
+/*1. Faça um algoritmo que receba 4 números e mostre o menor.*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
