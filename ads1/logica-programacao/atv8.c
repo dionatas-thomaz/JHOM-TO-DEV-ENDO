@@ -18,4 +18,4 @@ a= pi*(r*r);
 printf("raio do circulo e: %d",a);
 
     return 0;
-}g
+}
