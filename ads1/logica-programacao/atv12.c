@@ -10,12 +10,8 @@ int main()
     scanf("%d", &a);
 
     for (size_t i = 100; i > 0; i--)
-    {
-        if (i%a== 0)
-        {
+        if (i % a == 0)
             printf("numero div: %d\n", i);
-        }
-    }
 
     return 0;
 }
