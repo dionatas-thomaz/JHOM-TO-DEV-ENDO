@@ -7,7 +7,7 @@ int a ,b ,c;
 
 printf("digite o primeiro digito: ");
 scanf("%d",&a);
-printf("digite o segundo digito: ");
+printf("digite o segundo2 digito: ");
 scanf("%d",&b);
 printf("digite o terceiro digito: ");
 scanf("%d",&c);
