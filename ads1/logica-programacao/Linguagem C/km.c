@@ -4,7 +4,7 @@
 int main()
 {
 
-    float a = 16, b = 12, c = 8, litr, prec;
+    float  litr, prec;
 
     char op;
 
@@ -20,17 +20,17 @@ int main()
     switch (op)
     {
     case 'a':
-        printf(" a distancia percorrida pelo carro a foi : %.f\n", a * litr);
+        printf(" a distancia percorrida pelo carro a foi : %.f\n", 16 * litr);
         printf("o dinheiro gasto com gasolina foi : %.f", prec * litr);
         break;
 
     case 'b':
-        printf(" a distancia percorrida pelo carro b foi : %.f\n", b * litr);
+        printf(" a distancia percorrida pelo carro b foi : %.f\n", 12 * litr);
         printf("o dinheiro gasto com gasolina foi : %.f", prec * litr);
         break;
 
     case 'c':
-        printf(" a distancia percorrida pelo carro c foi : %.f\n", c * litr);
+        printf(" a distancia percorrida pelo carro c foi : %.f\n", 8 * litr);
         printf("o dinheiro gasto com gasolina foi : %.f", prec * litr);
         break;
 

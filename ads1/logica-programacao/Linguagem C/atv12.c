@@ -6,7 +6,7 @@ int main()
 
     int a;
 
-    printf("digite o numero: ");
+    printf("digite o numeroo: ");
     scanf("%d", &a);
 
     for (size_t i = 100; i > 0; i--)
