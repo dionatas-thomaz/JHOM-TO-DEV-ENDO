@@ -47,7 +47,7 @@ int main()
 
     printf("result: %.f",imc);
 
-          return 0;
+          return 0;*/
 }
-*/
+
 
