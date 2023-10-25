@@ -13,17 +13,17 @@ int main()
 
     if (idade >= 12 && peso >= 60)
         ml = 1000;
-    if (idade >= 12 && peso < 60)
+    else if (idade >= 12 && peso < 60)
         ml = 875;
-    if (peso > 5 && peso <= 9)
+    else if (peso > 5 && peso <= 9)
         ml = 125;
-    if (peso > 9 && peso <= 16)
+    else if (peso > 9 && peso <= 16)
         ml = 250;
-    if (peso > 16 && peso <= 24)
+    else if (peso > 16 && peso <= 24)
         ml = 375;
-    if (peso > 24 && peso < 30)
+    else if (peso > 24 && peso < 30)
         ml = 500;
-    if (peso >= 30)
+    else 
         ml = 750;
 
     printf("dosagem de %.f mg que coresponde a:%.f gotas",ml, gotas = ml * 20);
