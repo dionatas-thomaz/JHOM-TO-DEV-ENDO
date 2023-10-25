@@ -6,23 +6,18 @@
 int main()
 {
 
-    int i,  menor = 0, vetor[4];
-    menor = vetor[0];
+    int i, menor = 0, vetor[4];
 
     for (i = 0; i < 4; i++)
     {
         printf("INSIRA O DADO: ");
         scanf("%d", &vetor[i]);
-        
-
+        menor = vetor[0];
         if (menor > vetor[i])
         {
             menor = vetor[i];
-
         }
-       /* printf("\ndado vetor: %d\n",vetor[i]);*/
-       
     }
- printf("\ndado do menor: %d\n", menor);
+    printf("\ndado do menor: %d\n", menor);
     return 0;
 }

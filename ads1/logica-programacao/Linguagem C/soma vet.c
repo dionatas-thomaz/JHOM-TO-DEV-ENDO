@@ -10,7 +10,7 @@ int main()
     {
         printf("digite um numero:");
         scanf("%d", &vet[i]);
-        a =  vet[i]+a ;
+        a += vet[i];
     }
     printf("a soma deu: %d", a);
 
