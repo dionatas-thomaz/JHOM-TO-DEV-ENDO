@@ -4,15 +4,16 @@
 int main()
 {
 
-    int vet[3], a = 0;
+    int vet[4],i=0, a = 0;
 
-    for (size_t i = 0; i < 4; i++)
+    for ( i = 0; i < 4; i++)
     {
         printf("digite um numero:");
         scanf("%d", &vet[i]);
-        a += vet[i];
+           a+= vet[i];
+          
     }
-    printf("a soma deu: %d", a);
+     printf("\na soma deu: %d\n", a);
 
     return 0;
 }
