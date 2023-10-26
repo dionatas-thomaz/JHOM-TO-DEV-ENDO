@@ -13,7 +13,7 @@ scanf ("%f", &hrs_trab);
 
 bruto= (salario_min/2)*hrs_trab;
 porc= bruto*0.03;
-salario_a_recb= bruto-porc;
-printf("o salario total sera: %.1f", salario_a_recb);
+
+printf("o salario total sera: %.1f",salario_a_recb= bruto-porc );
 return 0;
 }
