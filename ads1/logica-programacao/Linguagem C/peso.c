@@ -16,7 +16,7 @@ int main()
         scanf("%f", &vetor[i]);
 
         media += (vetor[i] / 10) * peso;
-        peso++;
+               peso++;
         if (peso == 4)
         {
             peso++;

@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (){
+
+float valor,pagar;
+char op;
+
+printf("valor a da compra: ");
+scanf("%f",&valor);
+
+
+
+
+
+    return 0;
+}
