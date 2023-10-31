@@ -4,7 +4,7 @@
 float valorapagar(float valor, float *desc)
 {
     char op;
-    printf("escolha a forma de pagamento:\n[1]A vista em dinheiro ou cheque com 10%% de desconto\n[2]A vista no cartao de debito com 7,5%% de desconto\n[3]A vista no cartao de credito com 5%% de desconto \n[4]dividir em duas vezes sem juros\n[5]Em quatro vezes com juros de 9,5%%\n");
+    printf("escolha a forma de pagamento:\n[1]A vista em dinheiro ou cheque com 10%% de desconto\n[2]A vista no cartao de debito com 7,5%% de desconto\n[3]A vista no cartao de credito com 5%% de desconto \n[4]dividir em duas vezes sem juros\n[5]Em quatro vezes com juros de 9,5%%\n\n");
     scanf("%s", &op);
 
     switch (op)
