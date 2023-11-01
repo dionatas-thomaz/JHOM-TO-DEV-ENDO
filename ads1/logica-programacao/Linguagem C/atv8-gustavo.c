@@ -31,7 +31,7 @@ int main()
                 mmc *= i;
             }
         }
-        printf("vetor: %d", mmc);
+        printf("MMC: %d", mmc);
     } while (num1 != 1 && num2 != 1);
     return 0;
 }
