@@ -1,55 +1,62 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-#define MAX 2
+//#define MAX 3
 
-typedef struct {    
+typedef struct
+{
     char corOlhos[50], corCabelo[50];
     int idade;
-    float peso,altura;    
+    float peso, altura;
 } pessoa;
 
-int main() {
-    float idade = 0, idadeM = 0, media = 0, azul = 0, ruivas = 0;
-    pessoa p[MAX];
+int main()
+{
+    float MAX=0,idadee = 0, idadeM = 0, media = 0,result=0, azul = 0, ruivas = 0;
+    pessoa p;
 
-    for (size_t i = 0; i < MAX; i++) {
-        printf("\nIdade: ");
-        scanf("%d",&p[i].idade);        
-        printf("Peso: ");
-        scanf("%f",&p[i].peso);
+    while (p.idade!=0)
+    {
+        
+        printf("\nIdade:\n ");
+        scanf("%d", &p.idade);
+        if (p.idade==0){
+            break;}
+        printf("Peso:\n ");
+        scanf("%f", &p.peso);
         printf("Altura: ");
-        scanf("%f",&p[i].altura);
-        printf("Cor dos olhos: ");
-        scanf("%s",&p[i].corOlhos);
-        printf("Cor dos cabelos: ");
-        scanf("%s",&p[i].corCabelo);
-    }
+        scanf("%f", &p.altura);
+        printf("\nCor dos olhos: ");
+        scanf("%s", p.corOlhos);
+        printf("Cor dos cabelos:\n ");
+        scanf("%s", p.corCabelo);
+        MAX++;
 
-
-    for (size_t i = 0; i < MAX; i++) {
-        printf("\nIdade: %d\n",p[i].idade);        
-        printf("Peso: %.2f\n",p[i].peso);        
-        printf("Altura: %.2f\n",p[i].altura);        
-        printf("Cor dos olhos: %s\n",p[i].corOlhos);        
-        printf("Cor dos cabelos: %s\n",p[i].corCabelo);        
-
-        if (p[i].idade > 50 && p[i].peso < 60){
-           
-        }
-        if (p[i].altura < 1.50)
+        if (p.idade > 50 && p.peso < 60)
         {
-           
-        }        
-        if (strcmp(p[i].corOlhos, "azul")==0){            
-
+            idadee++;
         }
-        else if (strcmp(p[i].corCabelo, "ruivo")==0){            
-        
+        if (p.altura < 1.50)
+        {
+            media++;
+            idadeM += p.idade;
+            result=idadeM / media;
         }
-        
+        if (strcmp(p.corOlhos, "azul") == 0)
+        {
+            azul++;
+        }
+        if (strcmp(p.corCabelo, "ruivo") == 0 && strcmp(p.corOlhos, "azul") != 0)
+        {
+            ruivas++;
+        }
     }
-    
+
+    printf("Quantidade de pessoas com idade superior a 50 anos e peso inferior a 60 kg: %.f\n", idadee);
+    printf("Media das idades das pessoas com altura inferior a 1,50 m: %.2f\n", result);
+    printf("Porcentagem de pessoas com olhos azuis entre todas as pessoas analisadas: %.2f%%\n", (azul /= MAX) * 100);
+    printf("Quantidade de pessoas ruivas e que nao possuem olhos azuis: %.f\n", ruivas);
 
     return 0;
 }
