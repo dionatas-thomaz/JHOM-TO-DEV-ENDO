@@ -16,8 +16,8 @@ int main()
         cidadeB += b;
         anos++;
     } while (cidadeA <= cidadeB);
-    printf("tamanho da populaçao da cidade A :%.f", cidadeA);
-    printf("\ntamanho da populaçao da cidade B :%.f\n\n", cidadeB);
+    printf("tamanho da populacao da cidade A :%.f", cidadeA);
+    printf("\ntamanho da populacao da cidade B :%.f\n\n", cidadeB);
     printf("%.f anos", anos);
 
     return 0;
