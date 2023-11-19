@@ -1,7 +1,8 @@
 {
     "files.associations": {
         "TEST.C": "cpp",
-        "ATV16GUSTAVO.C": "cpp"
+        "ATV16GUSTAVO.C": "cpp",
+        "cmath": "c"
     },
     "cmake.configureOnOpen": false
 }
