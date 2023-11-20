@@ -16,7 +16,7 @@ res+=s;
 res+= 1/pow(n,n);
 n-=1;
 res+=1/pow(n,n);
-printf("resultado:%f",res);
+printf("resultado de S:%f",res);
 
 return 0;
 }
