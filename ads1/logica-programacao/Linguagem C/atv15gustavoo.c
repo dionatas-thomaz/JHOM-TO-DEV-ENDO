@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-//#define MAX 3
-
 typedef struct
 {
     char corOlhos[50], corCabelo[50];
@@ -27,9 +25,9 @@ int main()
         scanf("%f", &p.peso);
         printf("Altura: ");
         scanf("%f", &p.altura);
-        printf("\nCor dos olhos: ");
+        printf("azul\npreto\nverde\ncastanho\nCor dos olhos:");
         scanf("%s", p.corOlhos);
-        printf("Cor dos cabelos:\n ");
+        printf("preto\ncastanho\nlouro\nruivo\nCor dos cabelos:\n ");
         scanf("%s", p.corCabelo);
         MAX++;
 
