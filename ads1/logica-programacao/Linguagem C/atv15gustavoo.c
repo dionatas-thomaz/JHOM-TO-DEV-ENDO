@@ -55,7 +55,7 @@ int main()
 
     printf("Quantidade de pessoas com idade superior a 50 anos e peso inferior a 60 kg: %.f\n", idadee);
     printf("Media das idades das pessoas com altura inferior a 1,50 m: %.2f\n", result);
-    printf("Porcentagem de pessoas com olhos azuis entre todas as pessoas analisadas: %.2f%%\n", (azul /= MAX) * 100);
+    printf("Porcentagem de pessoas com olhos azuis entre todas as pessoas analisadas: %.2f%%\n", (azul / MAX) * 100);
     printf("Quantidade de pessoas ruivas e que nao possuem olhos azuis: %.f\n", ruivas);
 
     return 0;

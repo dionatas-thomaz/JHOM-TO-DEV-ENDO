@@ -11,24 +11,6 @@ float fatorial(float num)
     }
     return result;
 }
-float menos(float n, float CRAZY)
-{
-    float menos = 0;
-    CRAZY -= (fatorial(1) / pow(n, n));
-    n -= 1;
-    CRAZY -=( fatorial(2) / pow(n, n));
-    menos += CRAZY;
-    return menos;
-}
-float mais(float n, float CRAZY)
-{
-    float mais = 0;
-    CRAZY += (fatorial(1) / pow(n, n));
-    n -= 1;
-    CRAZY += (fatorial(2) / pow(n, n));
-    mais += CRAZY;
-    return mais;
-}
 int main()
 {
     float lup = 1, n, CRAZY = 0;
@@ -47,7 +29,7 @@ int main()
         
         lup++;
     }
-    printf("resultado de CRAZY - : %.2f",menos(n,CRAZY));
-    printf("resultado de CRAZY + : %.2f", mais(n,CRAZY));
+    printf("resultado de CRAZY - : %.2f",CRAZY);
+   
     return 0;
 }
