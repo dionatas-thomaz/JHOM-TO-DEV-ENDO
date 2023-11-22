@@ -44,6 +44,11 @@ int main()
             scanf("%f", &salario);
             printf("digite os meses trabalhados: ");
             scanf("%f", &mesestrab);
+            if (mesestrab>12)
+            {
+                printf("\nvalor invalido!\n");
+               break;
+            }
             decimoter = (salario * mesestrab) / 12;
             printf("seu decimo terceiro sera: %.2f\n", decimoter);
             break;
