@@ -8,8 +8,8 @@ printf("digite a quantidade de termos :");
 scanf("%f",&n);
 printf("digite o valor de s :");
 scanf("%f",&s);
-res+=s;
-for (size_t i = 2; i < n; i++)
+
+for (size_t i = 1; i < n; i++)
 {
     res+=(s/pow(i,i));
 }

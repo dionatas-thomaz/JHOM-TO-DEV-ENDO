@@ -6,8 +6,8 @@ int main (){
 float n,DOIDO=0;
 printf("digite o valor de N .-. :");
 scanf("%f",&n);
-DOIDO+=n;
-for (size_t i = 2; i < n; i++)
+;
+for (size_t i = 1; i < n; i++)
 {
    DOIDO+= (n-1)/pow(i,i);
 }

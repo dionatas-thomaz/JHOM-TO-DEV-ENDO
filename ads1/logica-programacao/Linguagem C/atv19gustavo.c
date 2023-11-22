@@ -5,7 +5,7 @@
 float fatorial(float num)
 {
     float result = 1;
-    for (size_t i = 1; i < num; i++)
+    for (size_t i = 1; i <= num; i++)
     {
         result*= i;
     }
