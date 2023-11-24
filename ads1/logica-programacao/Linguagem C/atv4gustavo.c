@@ -3,8 +3,7 @@
 
 int main()
 {
-
-    float idade, peso, gotas, ml;
+    float idade, peso, dosagem,ml,gotas;
 
     printf("digite sua idade: ");
     scanf("%f", &idade);
@@ -12,20 +11,23 @@ int main()
     scanf("%f", &peso);
 
     if (idade >= 12 && peso >= 60)
-        ml = 1000;
+        dosagem = 1000;
     else if (idade >= 12 && peso < 60)
-        ml = 875;
+        dosagem = 875;
     else if (peso > 5 && peso <= 9)
-        ml = 125;
+        dosagem = 125;
     else if (peso > 9 && peso <= 16)
-        ml = 250;
+        dosagem = 250;
     else if (peso > 16 && peso <= 24)
-        ml = 375;
+        dosagem = 375;
     else if (peso > 24 && peso < 30)
-        ml = 500;
+        dosagem = 500;
     else 
-        ml = 750;
+        dosagem = 750;
 
-    printf("dosagem de %.f mg que coresponde a:%.f gotas",ml, gotas = ml * 20);
+        ml=dosagem/500;
+        gotas= ml*20;
+
+    printf("dosagem de %.f mg \n que coresponde a:%.2f ml\n sao %.f gostas",dosagem,ml,gotas);
     return 0;
 }

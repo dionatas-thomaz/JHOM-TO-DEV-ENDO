@@ -3,13 +3,14 @@
 #include <math.h>
 
 int main (){
-float n,DOIDO=0;
+float aux=0,n,DOIDO=0;
 printf("digite o valor de N .-. :");
 scanf("%f",&n);
-;
-for (size_t i = 1; i < n; i++)
+//DOIDO+=n;
+for (size_t i = 1; i <= n; i++)
 {
-   DOIDO+= (n-1)/pow(i,i);
+   DOIDO+= (n-aux)/pow(i,i);
+   aux++;
 }
 printf("resultado de doido: %.2f",DOIDO);
 return 0;

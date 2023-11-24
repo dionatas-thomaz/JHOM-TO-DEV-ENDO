@@ -20,7 +20,7 @@ int main()
     scanf("%d", &vet[2]);
 
     printf("\nA sequencia de termos e: \n");
-    for (i = 3; i <= n; i++){
+    for (i = 3; i < n; i++){
         if (i % 2 == 0) {
            vet[i] = vet[a1(i)] - vet[a2(i)];
             printf("%d\n", vet[i]); 

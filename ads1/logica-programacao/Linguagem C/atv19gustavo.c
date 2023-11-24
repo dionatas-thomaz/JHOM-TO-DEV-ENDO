@@ -13,11 +13,11 @@ float fatorial(float num)
 }
 int main()
 {
-    float lup = 1, n, CRAZY = 0;
+    float lup = 0, n, CRAZY = 0;
     printf("digite o valor de N .-. :");
     scanf("%f", &n);
-    CRAZY += fatorial(n);
-    for (size_t i = 2; i < n; i++)
+   // CRAZY += fatorial(n);
+    for (size_t i = 1; i < n; i++)
     {
         if (i % 2 == 0)
         

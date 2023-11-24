@@ -26,10 +26,9 @@ float valorapagar(float valor, float *desc)
         printf("em 2x sem juros de:");
         break;
     case '5':
-        *desc = valor * 0.95;
-        valor = (valor+ *desc)/4;
-
-        printf("Em 4x de: ");
+        *desc = valor * 0.095;
+       valor = (valor+ *desc);
+    
         break;
     default:
         printf("opcao invalida");
