@@ -30,5 +30,6 @@ int main()
             printf("%d\n", vet[i]);
         }
     }
+    
    return 0;
 }
