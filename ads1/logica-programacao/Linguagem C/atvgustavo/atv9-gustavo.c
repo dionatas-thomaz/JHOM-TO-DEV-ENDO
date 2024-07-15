@@ -3,7 +3,7 @@
 #include <math.h>
 int main (){
 float n,s=0;
-printf("digite a quantidade dee termos :");
+printf("digite a quantidade de termos :");
 scanf("%f",&n);
 for (size_t i = 1; i < n; i++)
 {

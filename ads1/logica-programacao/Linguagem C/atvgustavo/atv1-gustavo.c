@@ -16,13 +16,22 @@ int main()
         scanf("%f", &vetor[i]);
 
         media += (vetor[i] / 10) * peso;
-               peso++;
+        peso++;
         if (peso == 4)
         {
             peso++;
         }
     }
-    printf("media:%.2f\n", media);
-    printf("fim de linha");
+    if (media >= 8)
+        printf("nota A");
+    else if (media >= 7)
+        printf("nota B");
+    else if (media >= 6)
+        printf("nota C");
+    else if (media >= 5)
+        printf("nota D");
+    else if (media >= 4)
+        printf("nota E");
+
     return 0;
 }
