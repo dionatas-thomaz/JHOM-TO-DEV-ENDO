@@ -3,6 +3,15 @@
 #include <math.h>
 
 int main (){
+   float fatorial(float num)
+{
+    float result = 1;
+    for (size_t i = 1; i <= num; i++)
+    {
+        result*= i;
+    }
+    return result;
+}
 float aux=0,n,DOIDO=0;
 printf("digite o valor de N .-. :");
 scanf("%f",&n);
