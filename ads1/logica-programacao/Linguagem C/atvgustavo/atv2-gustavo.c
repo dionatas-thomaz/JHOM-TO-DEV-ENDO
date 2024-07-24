@@ -42,6 +42,7 @@ int main(){
     }
     if (a >= 1){
         cont1 = a;
+        a-=cont1;
              printf("moeda de 1 real: %d\n", cont1);
     }
     if (a >= 0.50){
