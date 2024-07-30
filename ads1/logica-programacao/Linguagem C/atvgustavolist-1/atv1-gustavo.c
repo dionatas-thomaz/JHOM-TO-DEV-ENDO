@@ -15,6 +15,8 @@ int main()
         scanf("%f", &vetor[i]);
         media += (vetor[i] / 10) * peso[i];
     }
+    printf("a media e : %.2f\n",media);
+
     if (media >= 8)
         printf("nota A");
     else if (media >= 7)

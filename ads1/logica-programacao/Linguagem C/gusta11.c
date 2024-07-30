@@ -8,7 +8,6 @@
 int main(){
     
  
-  
     
    float media[TAM],Prova1[TAM],Prova2[TAM];
     srand(time(NULL));
