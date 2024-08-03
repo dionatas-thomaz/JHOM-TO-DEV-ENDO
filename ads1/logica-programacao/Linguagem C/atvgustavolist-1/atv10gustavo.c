@@ -16,7 +16,6 @@ int main()
     float lup = 0, n, DOIDO = 0;
     printf("digite o valor de N .-. :");
     scanf("%f", &n);
-   // DOIDO += fatorial(n);
     for (size_t i = 1; i < n; i++)
     {
         if (i % 2 == 0)
