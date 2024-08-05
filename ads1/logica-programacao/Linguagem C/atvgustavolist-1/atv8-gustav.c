@@ -1,3 +1,6 @@
+/*APENAS USANDO VERTOR E FUNÇAO COMO ESTUDO NESSA QUESTAO, MAS A RESULUÇAO PODERIA SER 
+vet[i] = vet[i-1]  - vet[i-2];  :) */
+
 #include <stdio.h>
 #include <stdlib.h>
 
