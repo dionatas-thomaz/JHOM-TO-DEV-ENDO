@@ -2,35 +2,47 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX_NOMES 3    // Quantidade máxima de nomes
-#define TAM_MAX_NOME 50 // Tamanho máximo de cada nome
+#define MAX  2  // Quantidade máxima de nomes e tipos sanguineos 
+#define TAM_MAX 50 // Tamanho máximo de cada caracteres
+
+typedef struct
+{
+    char* nomes[MAX];
+    char* tipo_sangue[MAX];
+    int data_nascimento[MAX];
+} dados;
 
 int main() {
-    char* nomes[MAX_NOMES];
+    
+    dados dados;
 
-    for (int i = 0; i < MAX_NOMES; i++) {
-        nomes[i] = (char*)malloc(TAM_MAX_NOME * sizeof(char));
-        if (nomes[i] == NULL) {
+    for (int i = 0; i < MAX; i++) {
+        dados.nomes[i] = (char*)malloc(TAM_MAX  * sizeof(char));
+        dados.tipo_sangue[i] = (char*)malloc(TAM_MAX  * sizeof(char));
+        dados.data_nascimento[i] = (int)malloc(sizeof(int));
+        if (dados.nomes[i] == NULL) {
             fprintf(stderr, "Erro de alocação de memória\n");
             return 1;
         }
     }
 
-    for (int i = 0; i < MAX_NOMES; i++) {
+    for (int i = 0; i < MAX; i++) {
         printf("Digite o nome %d: ", i + 1);
-        if (fgets(nomes[i], TAM_MAX_NOME, stdin) != NULL) {
+        if (fgets(dados.nomes[i], TAM_MAX, stdin) != NULL) {
             
-            nomes[i][strcspn(nomes[i], "\n")] = '\0';
+            dados.nomes[i][strcspn(dados.nomes[i], "\n")] = '\0';
         }
     }
     printf("\nNomes digitados:\n");
-    for (int i = 0; i < MAX_NOMES; i++) {
-        printf("Nome %d: %s\n", i + 1, nomes[i]);
+    for (int i = 0; i < MAX; i++) {
+        printf("Nome %d: %s\n", i + 1, dados.nomes[i]);
     }
     
-    for (int i = 0; i < MAX_NOMES; i++) {
-        free(nomes[i]);
-    }
+   // for (int i = 0; i < MAX_NOMES; i++) {
+   //     free(nomes[i]);
+   // }
+
+
 
     return 0;
 }

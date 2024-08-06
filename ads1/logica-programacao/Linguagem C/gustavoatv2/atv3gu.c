@@ -7,29 +7,40 @@
 
 int main()
 {
-    int vet1[TAM], vet2[TAM2], x = 0, y = 0;
+    int vet1[TAM], vet2[TAM2], x = 0, y = 0, lup = 0, par = 0, imp = 0;
 
     srand(time(NULL));
 
     for (int i = 0; i < TAM; i++)
     {
         vet1[i] = rand() % 10;
+        printf("numeros gerados no primeiro vetor: %d \n", vet1[i]);
         if (i < TAM2)
         {
             vet2[i] = rand() % 10;
+            printf("numeros gerados no segundo vet vetor: %d\n", vet2[i]);
         }
 
         if (vet1[i] % 2 == 0)
         {
-            y++;
+            par++;
+        }
+        if (vet1[i] % 2 != 0)
+        {
+            imp++;
         }
     }
+    
+    int vetpar[par];
+    int vetimp[imp];
 
-    int vetpar[y];
-
-    for (int i = 0; i < y; i++)
+    for (int i = 0; i < par; i++)
     {
         vetpar[i] = 0;
+    }
+    for (int i = 0; i < imp; i++)
+    {
+        vetimp[i] = 0;
     }
 
     for (int i = 0; i < TAM; i++)
@@ -44,9 +55,30 @@ int main()
         }
     }
 
-    for (int i = 0; i < y; i++)
+    for (size_t i = 0; i < TAM; i++)
     {
-        printf("valor vet[%d] = %d\n", i, vetpar[i]);
+        if (vet1[i] % 2 != 0)
+        {
+            for (size_t j = 0; j < TAM2; j++)
+            {
+                if (vet1[i] % vet2[j] == 0)
+                {
+                    y++;
+                    vetimp[lup] += y;
+                }
+            }
+            y = 0;
+            lup++;
+        }
+    }
+
+    for (int i = 0; i < par; i++)
+    {
+        printf("valor vetparr[%d] = %d\n", i, vetpar[i]);
+    }
+    for (int i = 0; i < imp; i++)
+    {
+        printf("valor vetimpar[%d] = %d\n", i, vetimp[i]);
     }
 
     return 0;
