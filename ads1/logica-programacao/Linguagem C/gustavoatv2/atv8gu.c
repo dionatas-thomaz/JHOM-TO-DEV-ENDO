@@ -50,7 +50,8 @@ maiorsal=dados.salario[0];
    
 }
 
-printf("a mediad do salario da populaçao e: %.2f\n",somasal/MAX_DADOS);
+printf("a media do salario da populaçao e: %.2f\n",somasal/MAX_DADOS);
+printf("o maior salario e : %.2f",maiorsal);
 printf("a media de filhos e: %.2f\n",somafilho/MAX_DADOS);
 printf("percentual de mulheres: %.1f%%",(m/p)*100);
 
