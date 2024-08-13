@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
-#define MAX_DADOS 2
+#define MAX_DADOS 1
 #define MAX_LENGTH 100
 #define DATE_LENGTH 12
 #define ANOS_LENGTH 5
@@ -43,7 +44,7 @@ int main()
             printf("\nDados da Pessoa %d:\n", i + 1);
             printf("Nome: %s\n", dados.nomes[i]);
             printf("Tipo sanguíneo: %s\n", dados.sangue[i]);
-            printf("Data de nascimento: %s\n", dados.data[i]);
+            printf("Data de nascimento: %s\n", dados.ano[i]);
         }
     }
 
