@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 #include <string.h>
 
 #define MAX_DADOS 1
@@ -39,8 +40,7 @@ int main()
     for (int i = 0; i < MAX_DADOS; i++)
     {
         int ano_nascimento = atoi(dados.ano[i]);
-        if (2024 - ano_nascimento >= 18 || 2024 - ano_nascimento >= 55)
-        {
+        if (2024 - ano_nascimento >= 18 &&  2024 - ano_nascimento < 55 &&  tolower(strcmp (dados.sangue[i], "b+")== 0)){
             printf("\nDados da Pessoa %d:\n", i + 1);
             printf("Nome: %s\n", dados.nomes[i]);
             printf("Tipo sanguíneo: %s\n", dados.sangue[i]);
