@@ -11,7 +11,7 @@ typedef struct
 {
     char nomes[MAX_DADOS][MAX_LENGTH];
     char telefone[MAX_DADOS][MAX_LENGTH];
-    char cpf[MAX_DADOS][CPF_LENGTH];
+    char cpf[MAX_DADOS][t12_LENGTH];
     char endereco[MAX_DADOS][MAX_LENGTH];
     char data[MAX_DADOS][t12_LENGTH];
     int quantidade_env[MAX_DADOS];
