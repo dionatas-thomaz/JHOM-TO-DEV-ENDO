@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include  <stdlib.h>
+#include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
 
@@ -22,6 +22,29 @@ typedef struct
 int main()
 {
     Dados dados;
+    for (size_t i = 0; i < MAX_DADOS; i++)
+    {
+        printf("digite  seu Nome: ");
+        scanf("%s", &dados.nomes[i]);
+        setbuf(stdin, NULL);
+        printf("digite seu telefone: ");
+        scanf("%s", &dados.nomes[i]);
+        setbuf(stdin, NULL);
+        printf("digite o CPF: ");
+        scanf("%s", &dados.cpf[i]);
+        setbuf(stdin, NULL);
+        printf("digite seu endereco: ");
+        scanf("%d", &dados.endereco);
+        setbuf(stdin, NULL);
+        printf("digite a data: ");
+        scanf("%d", &dados.data[i]);
+        setbuf(stdin, NULL);
+        printf("quantidade de envio: ");
+        scanf("%d", &dados.quantidade_env[i]);
+        setbuf(stdin, NULL);
+        printf("digite o valor: ");
+        scanf("%d", &dados.valor$[i]);
+    }
 
-return 0;
+    return 0;
 }

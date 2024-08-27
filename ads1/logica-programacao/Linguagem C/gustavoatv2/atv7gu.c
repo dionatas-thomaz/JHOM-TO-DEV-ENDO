@@ -8,8 +8,7 @@
 #define DATE_LENGTH 12
 #define ANOS_LENGTH 5
 
-typedef struct
-{
+typedef struct{
     char nomes[MAX_DADOS][MAX_LENGTH];
     char sangue[MAX_DADOS][MAX_LENGTH];
     char data[MAX_DADOS][DATE_LENGTH];

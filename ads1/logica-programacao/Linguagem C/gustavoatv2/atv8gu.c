@@ -15,21 +15,22 @@ typedef struct{
 int main()
 {
     Dados dados;
-    float somasal,somafilho,maiorsal,p,m;
+    float somasal=0,somafilho=0,maiorsal=0,p=0,m=0;
 
 for (size_t i = 0; i < MAX_DADOS; i++){
+    printf("digite seu sexo M ou F: ");
+    scanf("%c",&dados.sexo[i]);
+    setbuf(stdin, NULL);
+     printf("digite seu salario: ");
+    scanf("%f",&dados.salario[i]);
+    setbuf(stdin, NULL);
     printf("digite sua idade: ");
     scanf("%d",& dados.idade[i]);
-    setbuf(stdin, NULL);
-    printf("digite seu salario: ");
-    scanf("%f",&dados.salario[i]);
     setbuf(stdin, NULL);
     printf("digite o numero de filhos: ");
     scanf("%d",&dados.numfilho[i]);
     setbuf(stdin, NULL);
-    printf("digite seu sexo M ou F: ");
-    scanf("%c",&dados.sexo[i]);
-    setbuf(stdin, NULL);
+    
 }
 maiorsal=dados.salario[0];
  for (size_t i = 0; i < MAX_DADOS; i++){
@@ -50,11 +51,9 @@ maiorsal=dados.salario[0];
    
 }
 
-printf("a media do salario da populaçao e: %.2f\n",somasal/MAX_DADOS);
-printf("o maior salario e : %.2f",maiorsal);
+printf("a media do salario da populacao e: %.2f\n",somasal/MAX_DADOS);
+printf("o maior salario e : %.2f\n",maiorsal);
 printf("a media de filhos e: %.2f\n",somafilho/MAX_DADOS);
-printf("percentual de mulheres: %.1f%%",(m/p)*100);
-
-
+printf("percentual de mulheres: %.1f%%\n",(p*100)/m);
 return 0;
 }
