@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
 typedef struct
 {
     char corOlhos[50], corCabelo[50];
