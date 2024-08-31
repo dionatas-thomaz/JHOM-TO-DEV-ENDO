@@ -1,13 +1,9 @@
+/*APENAS USANDO VERTOR E FUNÇAO COMO ESTUDO NESSA QUESTAO, MAS A RESULUÇAO PODERIA SER 
+vet[i] = vet[i-1]  - vet[i-2];  :) */
+
 #include <stdio.h>
 #include <stdlib.h>
-int a1(int num1){
-    num1 -= 1;
-    return num1;
-}
-int a2(int num2){
-    num2 -= 2;
-    return num2;
-}
+
 int main()
 {
     int n, i;
@@ -22,14 +18,13 @@ int main()
     printf("\nA sequencia de termos e: \n");
     for (i = 3; i < n; i++){
         if (i % 2 == 0) {
-           vet[i] = vet[a1(i)] - vet[a2(i)];
+           vet[i] = vet[i-1] - vet[i-2];
             printf("%d\n", vet[i]); 
         }
         else {
-           vet[i] = vet[a1(i)] + vet[a2(i)];
+           vet[i] = vet[i-1] + vet[i-2];
             printf("%d\n", vet[i]);
         }
     }
-    
    return 0;
 }

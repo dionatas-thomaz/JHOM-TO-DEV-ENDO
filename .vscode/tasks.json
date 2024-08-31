@@ -3,7 +3,11 @@
         {
             "type": "cppbuild",
             "label": "C/C++: gcc.exe arquivo de build ativo",
+<<<<<<< HEAD
             "command": "C:\\MinGW\\bin\\gcc.exe",
+=======
+            "command": "C:/MinGW/bin/gcc.exe",
+>>>>>>> 66016e3ec2708f3e2c92c32484ef992e90e2abc0
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
@@ -12,12 +16,23 @@
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
+<<<<<<< HEAD
                 "cwd": "${fileDirname}"
+=======
+                "cwd": "C:/MinGW/bin"
+>>>>>>> 66016e3ec2708f3e2c92c32484ef992e90e2abc0
             },
             "problemMatcher": [
                 "$gcc"
             ],
+<<<<<<< HEAD
             "group": "build",
+=======
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+>>>>>>> 66016e3ec2708f3e2c92c32484ef992e90e2abc0
             "detail": "Tarefa gerada pelo Depurador."
         }
     ],
