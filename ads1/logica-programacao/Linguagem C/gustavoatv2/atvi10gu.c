@@ -1,50 +1,89 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 #include <string.h>
 
-#define MAX_DADOS 1
+#define MAX_COOPERADOS 2
 #define MAX_LENGTH 100
-#define t12_LENGTH 12
 
-typedef struct
-{
-    char nomes[MAX_DADOS][MAX_LENGTH];
-    char telefone[MAX_DADOS][MAX_LENGTH];
-    char cpf[MAX_DADOS][t12_LENGTH];
-    char endereco[MAX_DADOS][MAX_LENGTH];
-    char data[MAX_DADOS][t12_LENGTH];
-    int quantidade_env[MAX_DADOS];
-    float valor$[MAX_DADOS];
+typedef struct {
+    char nome[MAX_LENGTH];
+    char telefone[MAX_LENGTH];
+    char cpf[MAX_LENGTH];
+    char endereco[MAX_LENGTH];
+    char data[MAX_LENGTH]; 
+    int quantidade_env;
+    float valor_prod;
+} Cooperado;
 
-} Dados;
-
-int main()
-{
-    Dados dados;
-    for (size_t i = 0; i < MAX_DADOS; i++)
-    {
-        printf("digite  seu Nome: ");
-        scanf("%s", &dados.nomes[i]);
-        setbuf(stdin, NULL);
-        printf("digite seu telefone: ");
-        scanf("%s", &dados.nomes[i]);
-        setbuf(stdin, NULL);
-        printf("digite o CPF: ");
-        scanf("%s", &dados.cpf[i]);
-        setbuf(stdin, NULL);
-        printf("digite seu endereco: ");
-        scanf("%d", &dados.endereco);
-        setbuf(stdin, NULL);
-        printf("digite a data: ");
-        scanf("%d", &dados.data[i]);
-        setbuf(stdin, NULL);
-        printf("quantidade de envio: ");
-        scanf("%d", &dados.quantidade_env[i]);
-        setbuf(stdin, NULL);
-        printf("digite o valor: ");
-        scanf("%d", &dados.valor$[i]);
+void ordenaPorQuantidade(Cooperado cooperados[], int n) {
+    Cooperado temp;
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if (cooperados[i].quantidade_env < cooperados[j].quantidade_env) {
+                temp = cooperados[i];
+                cooperados[i] = cooperados[j];
+                cooperados[j] = temp;
+            }
+        }
     }
+}
+
+float aplicaBeneficio(Cooperado *cooperado, int posicao) {
+    float porcentagem = 20.0f - (posicao * 2.0f);
+    return cooperado->valor_prod * cooperado->quantidade_env * (1 + porcentagem / 100);
+}
+
+int main() {
+    Cooperado cooperados[MAX_COOPERADOS];
+    int n = MAX_COOPERADOS;
+    float totalDesembolso = 0.0f;
+
+    for (int i = 0; i < n; i++) {
+        printf("Digite seu nome: ");
+        scanf(" %[^\n]s", cooperados[i].nome);
+        setbuf(stdin, NULL);
+
+        printf("Digite seu telefone: ");
+        scanf(" %[^\n]s", cooperados[i].telefone);
+        setbuf(stdin, NULL);
+
+        printf("Digite o CPF: ");
+        scanf(" %[^\n]s", cooperados[i].cpf);
+        setbuf(stdin, NULL);
+
+        printf("Digite seu endereco: ");
+        scanf(" %[^\n]s", cooperados[i].endereco);
+        setbuf(stdin, NULL);
+
+        printf("Digite a data : ");
+        scanf(" %[^\n]s", cooperados[i].data);
+        setbuf(stdin, NULL);
+
+        printf("Quantidade enviada à cooperativa: ");
+        scanf("%d", &cooperados[i].quantidade_env);
+
+        printf("Valor total em R$ da produção entregue: ");
+        scanf("%f", &cooperados[i].valor_prod);
+        setbuf(stdin, NULL);
+    }
+
+    ordenaPorQuantidade(cooperados, n);
+
+    printf("\nCooperados beneficiados:\n");
+    for (int i = 0; i < 10; i++) {
+        float valorComBeneficio = aplicaBeneficio(&cooperados[i], i);
+        printf("\nCooperado %d:\n", i + 1);
+        printf("Nome: %s\n", cooperados[i].nome);
+        printf("CPF: %s\n", cooperados[i].cpf);
+        printf("Telefone: %s\n", cooperados[i].telefone);
+        printf("Endereco: %s\n", cooperados[i].endereco);
+        printf("Data de Associacao: %s\n", cooperados[i].data);
+        printf("Quantidade Enviada: %d\n", cooperados[i].quantidade_env);
+        printf("Valor da Producao com Beneficio: R$ %.2f\n", valorComBeneficio);
+        totalDesembolso += valorComBeneficio;
+    }
+
+    printf("\nTotal a ser desembolsado pela cooperativa: R$ %.2f\n", totalDesembolso);
 
     return 0;
 }

@@ -1,31 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
-
-
+#include <math.h>
+#define TAM_i 4
+#define TAM_j 7
 int main()
 {
- //      L  C  
-int vet[3][3],maior, menor;
-    srand(time(NULL));
-    maior=vet[0][0];
-     menor=vet[0][0];
-    
-for (int i = 0; i < 3; i++) {
-   for (int j = 0; j <3; j++) {
-       
-       vet[i][j] = 1+ rand() % 100;
-       printf("valores vet: %d\n",vet[i][j]);
-      if(vet[i][j] > maior){
-           maior=vet[i][j];
-      }
-       if(vet[i][j] < menor){
-           menor=vet[i][j];
-      }
-      
-   }
-}
-printf("maior numero: %d\n",maior);
-printf("menor numero: %d",menor);
+    int matriz[TAM_i][TAM_j], MINMAX, menor=100, aux_i, aux_j, i=0;
+    for(size_t i=0; i<TAM_i; i++){
+        for(size_t j=0; j<TAM_j; j++){
+            printf("Informe um numero:\n");
+            scanf("%d", &matriz[i][j]);
+            if(matriz[i][j] < menor){
+                menor = matriz[i][j];
+                aux_i= i;
+                aux_j=j;
+            }
+        }
+    }
+    printf("Menor valor da Matriz: Matriz[%d][%d]= %d\n", aux_i, aux_j, menor);
+    for(size_t j=0; j<TAM_j; j++){
+        if(matriz[aux_i][aux_j]< matriz[aux_i][j]){
+            MINMAX = matriz[aux_i][j];
+            i=aux_i;
+            aux_j = j;
+        }
+    }
+    printf("MINMAX: %d\nPosicao Matriz[%d][%d].\n", MINMAX ,i,aux_j);
     return 0;
 }
